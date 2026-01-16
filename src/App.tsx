@@ -14,7 +14,6 @@ const GAME_SPEED = 150
 export default function App() {
   const [snake, setSnake] = useState<Position[]>(INITIAL_SNAKE)
   const [food, setFood] = useState<Position>({ x: 15, y: 15 })
-  const [direction, setDirection] = useState<Position>(INITIAL_DIRECTION)
   const [gameOver, setGameOver] = useState(false)
   const [score, setScore] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
@@ -103,7 +102,6 @@ export default function App() {
           // Reset game
           setSnake(INITIAL_SNAKE)
           setFood({ x: 15, y: 15 })
-          setDirection(INITIAL_DIRECTION)
           directionRef.current = INITIAL_DIRECTION
           setGameOver(false)
           setScore(0)
@@ -133,7 +131,6 @@ export default function App() {
           newDirection.y !== -currentDir.y
         ) {
           directionRef.current = newDirection
-          setDirection(newDirection)
         }
       }
     }
@@ -141,16 +138,6 @@ export default function App() {
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
   }, [gameOver])
-
-  const resetGame = () => {
-    setSnake(INITIAL_SNAKE)
-    setFood({ x: 15, y: 15 })
-    setDirection(INITIAL_DIRECTION)
-    directionRef.current = INITIAL_DIRECTION
-    setGameOver(false)
-    setScore(0)
-    setIsPaused(false)
-  }
 
   return (
     <div className="app">
