@@ -1,0 +1,22 @@
+---
+description: "Starter template cleanup - remove placeholder content on first user prompt"
+alwaysApply: true
+---
+
+This is a starter template. On the user's first prompt, remove the template elements:
+
+1. Delete all elements on App.tsx and start from a blank:
+export default function App() {
+  return (
+    <div className="app">
+
+    </div>
+  )
+}
+2. Delete the associated CSS in src/index.css (styles for .onboarding-callouts, .callout, .callout-arrow, etc.)
+3. Replace the main content with code that addresses the user's request
+
+The template structure:
+- src/App.tsx - Main React component with placeholder content
+- src/index.css - Styles including template-specific onboarding styles
+- src/main.tsx - React entry point (keep as-is)

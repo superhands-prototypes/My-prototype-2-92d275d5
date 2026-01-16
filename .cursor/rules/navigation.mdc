@@ -1,0 +1,12 @@
+---
+description: "Browser navigation rules - never redirect, only open new windows"
+alwaysApply: true
+---
+
+Never change the current browser window location. Do not use:
+- window.location
+- window.location.href
+- window.location.replace()
+- window.location.assign()
+
+If you need to navigate to an external URL, always open a new window/tab using window.open().
