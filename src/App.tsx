@@ -140,9 +140,9 @@ export default function App() {
   }, [gameOver])
 
   return (
-    <div className="app">
+    <div className={`app ${gameOver ? 'game-over-theme' : ''}`}>
       <div className="phone-container">
-        <div className="phone-screen">
+        <div className={`phone-screen ${gameOver ? 'game-over-theme' : ''}`}
           <div className="phone-header">
             <div className="nokia-logo">NOKIA</div>
             <div className="score-display">SCORE: {score}</div>

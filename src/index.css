@@ -202,3 +202,64 @@ body {
 .game-area {
   z-index: 2;
 }
+
+/* Game Over Red Theme */
+.game-over-theme .phone-screen {
+  box-shadow: 
+    0 0 0 2px #ff0000,
+    0 0 20px rgba(255, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-theme .phone-header {
+  border-bottom: 2px solid #ff0000;
+}
+
+.game-over-theme .nokia-logo {
+  color: #ff0000;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.game-over-theme .score-display {
+  color: #ff0000;
+}
+
+.game-over-theme .game-area {
+  border: 2px solid #ff0000;
+}
+
+.game-over-theme .game-over {
+  color: #ff0000;
+}
+
+.game-over-theme .game-over-text {
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000;
+}
+
+.game-over-theme .game-over-score {
+  color: #ff0000;
+}
+
+.game-over-theme .game-over-hint {
+  color: #cc0000;
+}
+
+.game-over-theme .phone-footer {
+  border-top: 2px solid #ff0000;
+}
+
+.game-over-theme .controls-hint {
+  color: #cc0000;
+}
+
+.game-over-theme .phone-screen::before {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 0.03) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(255, 0, 0, 0.03) 3px
+  );
+}
